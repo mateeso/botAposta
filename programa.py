@@ -1,35 +1,36 @@
+
 import pyautogui, sys, time
 from random import randint
 
 #posicao do seu dinheiro na tela
-xgrana=778
-ygrana=460
+xgrana=423
+ygrana=254
 
 #array que vai armazenar as posicoes dos 2 botoes win2x
 xbotao=range(2)
 ybotao=range(2)
 #posicao do primeiro botoao win2x
-xbotao[0]=488
-ybotao[0]=640
+xbotao[0]=117
+ybotao[0]=333
 #posicao do segundo botao win2x
-xbotao[1]=976
-ybotao[1]=640
+xbotao[1]=595
+ybotao[1]=333
 #posicao do terminal, de preferencia no canto da tela
-xterminal=1243
-yterminal=154
+xterminal=200
+yterminal=482
 #posicao de um campo vazio simplesmente para poder desmarcar os caracteres selecionados
-xvazio=761
-yvazio=167
+xvazio=363
+yvazio=111
 #posicao botoes de aposta
 #botao clear
-xbotaoClear=420
-ybotaoClear=550
+xbotaoClear=415
+ybotaoClear=284
 #botao +0.01
-xbotao001=494
-ybotao001=550
+xbotao001=448
+ybotao001=284
 #botao de dobrar a aposta
-xbotao2x=971
-ybotao2x=550
+xbotao2x=686
+ybotao2x=285
 
 #LISTA DE FUNCOES
 #funcao que retorna o valor da carteira
@@ -50,7 +51,8 @@ def valorCarteira():
 	pyautogui.press('enter')
 #le o buffer do teclado e passa a saida para a variavel carteira
 	carteira=raw_input()
-	carteira=carteira.replace(',','.')
+	carteira=carteira.replace(carteira[-3],'.')
+	print carteira
 #como os dados serao a linha inteira, por ex: Balance: 0.00, e so queremos
 #os dados a partir do 9 caractere, vamos selecionar somente a partir dele
 #e converter o valor para o tipo ponto flutuante (float) que eh o tipo dos numeros decimais
